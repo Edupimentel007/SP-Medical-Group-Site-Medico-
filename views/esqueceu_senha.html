@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<style>
+html {
+  height: 100%;
+  
+}
+
+body {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 20%, rgba(0, 108, 169, 1) 100%);
+}
+
+.spmed {
+  position: absolute;
+  top: 18px;
+  left: 105px;
+  
+}
+
+
+input{
+    width: 500px;
+    height: 20px;
+    border-radius: 10px;
+}
+button {
+    width: 150px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: rgba(88, 181, 235, 0.788);
+    transition: 0.3s;
+    font-family: georgia;
+    font-size: 20px;
+}
+button:hover{
+    background-color: rgba(35, 143, 206, 0.356);
+}
+.A {
+    background-color: blue;
+}
+.voltar {
+  display: block;
+  width: 40px;
+  height: 50px;
+  margin-left: 95%;
+}
+.logo-pequeno {
+  margin-top: -90px;
+  width: 300px;
+}
+.esqueci {
+    margin-left: 625px;
+}
+input {
+    width: 500px;
+}
+
+</style>
+</head>
+<body>
+    <div>
+        <ul>
+          <a href="/">
+            <img src="IMAGENS/casa.png" class="voltar">
+          </a>
+        </ul>
+        <img class="logo-pequeno" src="IMAGENS/logo_menor.png">
+        <span class="spmed"><h3> SP Medical Group</h3></span>
+      </div>
+      <div class="esqueci">
+      <h1>Esqueci a Senha</h1>
+      <p>Informe seu endereço de e-mail abaixo e enviaremos instruções de redefinição de senha.</p>
+  
+      <form action="processar_esqueci_senha.php" method="post">
+          <label for="email">Endereço de E-mail:</label>
+          <input type="email" id="email" name="email" required><br><br>
+  
+          <input type="submit" value="Enviar Instruções">
+      </form>
+    </div>
+</body>
+</html>
