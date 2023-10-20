@@ -28,21 +28,11 @@ input{
     height: 20px;
     border-radius: 10px;
 }
-button {
-    width: 150px;
-    height: 35px;
-    border-radius: 10px;
-    background-color: rgba(88, 181, 235, 0.788);
-    transition: 0.3s;
-    font-family: georgia;
-    font-size: 20px;
-}
+
 button:hover{
     background-color: rgba(35, 143, 206, 0.356);
 }
-.A {
-    background-color: blue;
-}
+
 .voltar {
   display: block;
   width: 40px;
@@ -55,9 +45,13 @@ button:hover{
 }
 .esqueci {
     margin-left: 625px;
+    margin-top: 200px;
 }
 input {
     width: 500px;
+}
+.enviar {
+  margin-left: 60px;
 }
 
 </style>
@@ -78,9 +72,9 @@ input {
   
       <form action="processar_esqueci_senha.php" method="post">
           <label for="email">Endereço de E-mail:</label>
-          <input type="email" id="email" name="email" required><br><br>
+          <input type="email" id="email" name="email" placeholder="Ex: edersilva@gmail.com" required><br><br>
   
-          <input type="submit" value="Enviar Instruções">
+          <input type="submit" class="enviar" value="Enviar Instruções">
       </form>
     </div>
 </body>

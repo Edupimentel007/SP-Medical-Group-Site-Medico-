@@ -1,11 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de Login - Página Médica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div>
+        <ul>
+          <a href="/">
+            <img src="IMAGENS/casa.png" class="voltar">
+          </a>
+        </ul>
+        <img class="logo-pequeno" src="IMAGENS/logo_menor.png">
+        <span class="spmed"><h3> SP Medical Group</h3></span>
+      </div>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="processar_login.php" method="post">
+            <div class="input-container">
+                <label for="usuario">E-mail:</label>
+                <input type="text" id="usuario" name="usuario" placeholder="Ex: edersilva@gmail.com" required>
+            </div>
+
+            <div class="input-container">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+
+            <div class="button-container">
+                <button type="submit" class="login-button">Entrar</button>
+            </div>
+
+            <div class="forgot-password">
+                <a href ="esqueceu_senha.html">Esqueceu a senha?</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
 <style>
-html {
+ html {
   height: 100%;
   
 }
@@ -16,10 +54,6 @@ body {
   background: linear-gradient(0deg, rgba(255, 255, 255, 1) 20%, rgba(0, 108, 169, 1) 100%);
 }
 
-h1 {
-    font-family: georgia;
-    font-size: 50px;
-}
 .logoimg{
   display: inline-block;
   overflow: clip;
@@ -36,44 +70,31 @@ h1 {
     text-align: center;
     width: 100%;
 }
-.casa {
-  width: 50px;
-  height: 50px;
-  right: 90px;
-  position: absolute;
-  margin-top: 30px;
-  
-}
 
-input{
-    width: 500px;
-    height: 20px;
-    border-radius: 10px;
-}
 button {
     width: 150px;
     height: 35px;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: rgba(88, 181, 235, 0.788);
     transition: 0.3s;
     font-family: georgia;
     font-size: 20px;
+    margin-top: 10px;
 }
 button:hover{
     background-color: rgba(35, 143, 206, 0.356);
 }
-.A {
-    background-color: blue;
-}
+
 .voltar {
   display: block;
   width: 40px;
   height: 50px;
-  margin-left: 95%;
+  margin-left: 900px;
 }
 .logo-pequeno {
   margin-top: -90px;
   width: 300px;
+  padding-top: 65px;
 }
 #username {
   border-radius: 20px;
@@ -88,35 +109,69 @@ button:hover{
 label {
   font-size: 20px;
 }
-h1 {
-  font-style: italic;
+
+.login-container {
+    background-color: #ffffffe3;
+    width: 450px;
+    height: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s;
+    margin-top: 200px;
 }
-button {
-  
-  border-radius: 20px;
+.login-container:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+h2 {
+    text-align: center;
+    color: #1E90FF;
+    font-size: 30px;
+}
+.input-container {
+    margin: 10px 0;
 }
 
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+input[type="text"],
+input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    transition: background-color 0.3s;
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+    background-color: #e6e6e6;
+}
+.button-container {
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: #1E90FF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #00BFFF;
+}
+a{
+    position: absolute;
+    left: 46.9%;
+    margin-top: 16px;
+}
 </style>
-</head>
-<body>
-    <div>
-        <ul>
-          <a href="/">
-            <img src="IMAGENS/casa.png" class="voltar">
-          </a>
-        </ul>
-        <img class="logo-pequeno" src="IMAGENS/logo_menor.png">
-        <span class="spmed"><h3> SP Medical Group</h3></span>
-      </div>
-<form action="/login" method="post" class="formulario"><br><br>
-    <h1>LOGIN</h1><br><br>
-<label for="username">Usuário:</label>
-<input type="text" id="username" name="username" required><br><br>
-<label for="password">Senha:</label>
-<input type="password" id="password" name="password" required><br><br>
-<button type="submit">Login</button> <br><br>
-<p><a href="esqueceu_senha.html">Esqueceu a senha?</a></p>
-</form>
-</form>
-</body>
-</html>
